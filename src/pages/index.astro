@@ -14,6 +14,7 @@ import NetworkSection from '../components/NetworksSection.astro';
 import ContainerSection from '../components/ContainerSection.astro';
 import Education from '../components/Education.astro';
 import Projects from '../components/Projects.astro';
+
 ---
 
 <Layout 
@@ -49,7 +50,7 @@ import Projects from '../components/Projects.astro';
 			</nav>
 		</ContainerSection>
 
-		<ContainerSection id="#educacion">
+		<ContainerSection id="educacion">
 			<h2 class="text-3xl flex gap-x-4 items-center mb-4">
 				<EducationIcon class="size-7"/> 
 				Educación
@@ -57,13 +58,14 @@ import Projects from '../components/Projects.astro';
 			<Education />
 		</ContainerSection>
 
-		<ContainerSection>
-			<h2 class="text-3xl flex gap-x-4 items-center mb-4">
+		<ContainerSection id="proyectos">
+			<h2 class="text-3xl flex gap-x-4 items-center m-4">
 				<WorkIcon class="size-7"/> 
-				Educación
+				Proyectos
 			</h2>
-			<Projects />
+			<Projects class="mt-4"/>
 		</ContainerSection>
+
 	</main>
 </Layout>
 

@@ -1,11 +1,34 @@
-<header class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto">
-    <span></span>
+---
+ const navItems = [ 
+    {
+        title: "Educación",	
+        label: "educacion",
+        url: "/#educacion",
+    },
+    {
+        title: "Proyectos",	
+        label: "proyectos",
+        url: "/#proyectos",
+    },
+    {
+        title: "Contacto",	
+        label: "contacto",
+        url: "mailto:vellattanzio@gmail.com",
+    },
+ ]
+---
 
-    <nav class="flex flex-row gap-x-10 opacity-90">
-        <a class="hover:scale-110" href="#top">Inicio</a>
-        <a href="#educacion">Educación</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href=#proyectos>Proyectos</a>
-        <a href="#contactos">Contacto</a>
+<header class="fixed top-0 z-10 flex justify-center items-center py-5 w-full mx-auto">
+    <nav class="flex flex-row gap-x-10 opacity-90 justify-center items-center">
+        {
+            navItems.map((link) =>
+                <a class="relative block px-2 py-2 transition hover:text-cyan-300"
+                aria-label={link.label}
+                href={link.url}
+                >
+                    {link.title}
+                </a>
+            )
+        }
     </nav>
 </header>   

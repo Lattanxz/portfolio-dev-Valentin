@@ -1,0 +1,70 @@
+---
+/* Datos generales */
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro';
+/* Icons */ 
+import LinkedInIcon from '../icons/LinkedIn.astro';
+import GitHubIcon from '../icons/Github.astro';
+import MailIcon from "../icons/Mail.astro";
+import EducationIcon from '../icons/EducationIcon.astro';
+import WorkIcon from '../icons/Works.astro';
+/* Secciones */
+import NetworkSection from '../components/NetworksSection.astro';
+import ContainerSection from '../components/ContainerSection.astro';
+import Education from '../components/Education.astro';
+import Projects from '../components/Projects.astro';
+---
+
+<Layout 
+	title="Portfolio de Valentin - Desarrolador y Programador Web."
+	description="Contrata a Valentin, un Desarrolador Web de Buenos Aires, Argentina. Conocimientos en HTML, CSS, JavaScript, React, Node.js y más."
+
+>
+	<main class="px-4">
+		<ContainerSection class="py-44 pb-24">
+			<img class="rounded-full w-12 h-12 mb-4" 
+			src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCP-UTKdeAGo4yNy_K5JzrkmYNlxtBYDpmqyUPAOE0tQ&s" 
+			alt="valentin" 
+			/>
+			<h1 class="text-white text-3xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 lg:text-5xl">
+				Hola, soy Valentin! 
+				<a  href="https://www.linkedin.com/in/valentin-ezequiel-lattanzio/" target="_blank" class="flex justify-center items-center"><Badge>Disponible para trabajar.</Badge></a> <!-- Integracion de Badge -->
+			</h1>
+			<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">Aprendiendo cada día más. <span class="text-cyan-300">Tec. en Programación 👨‍💻 y Desarrolador Web.</span> De Buenos Aires, Argentina. Mi mayor busqueda es crecer profesionalmente.</h2>
+
+			<nav class="flex gap-4 mt-4 flex-wrap">
+				<NetworkSection href="https://www.linkedin.com/in/valentin-ezequiel-lattanzio/">
+					<LinkedInIcon class="size-4 lg:size-6"></LinkedInIcon>	
+					LinkedIn
+				</NetworkSection>
+				<NetworkSection href="https://github.com/Lattanxz">
+					<GitHubIcon class="size-4 lg:size-6"></GitHubIcon>
+					GitHub
+				</NetworkSection>
+				<NetworkSection href="https://github.com/Lattanxz">
+					<MailIcon class="size-4 lg:size-6"></MailIcon>
+					vellattanzio@gmail.com
+				</NetworkSection>
+			</nav>
+		</ContainerSection>
+
+		<ContainerSection id="#educacion">
+			<h2 class="text-3xl flex gap-x-4 items-center mb-4">
+				<EducationIcon class="size-7"/> 
+				Educación
+			</h2>
+			<Education />
+		</ContainerSection>
+
+		<ContainerSection>
+			<h2 class="text-3xl flex gap-x-4 items-center mb-4">
+				<WorkIcon class="size-7"/> 
+				Educación
+			</h2>
+			<Projects />
+		</ContainerSection>
+	</main>
+</Layout>
+
+

@@ -1,0 +1,33 @@
+---
+const EDUCATION = [
+    {
+        date: 'En la actualidad...',
+        title: 'Estudiante de Ingenieria en Sistemas',
+        description: 'Estoy cursando el 1er año de Ingenieria en Sistemas en la Universidad Tecnológica Nacional.'
+    },
+    {
+        date: 'Marzo 2022 - Junio 2024 ',
+        title: 'Tecnicatura en Programación',
+        description: 'Finalice la Tecnicatura en Programación en la Universidad Tecnológica Nacional. Allí aprendí a programar en C#, HTML, CSS, JavaScript, SQL, entre otros.',
+    },
+    {
+        date: 'Marzo 2015 - Noviembre 2020',
+        title: 'Tecnico Informatico Personal y Profesional',
+        description: 'Finalice mi secundaria en el Instituto Privado Fray Luis Beltrán.'
+    }
+]
+
+import EducationItem from '../components/EducationItem.astro'
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+    {
+        EDUCATION.map(Education => (
+            <li class="mb-10 ms-4">
+                <EducationItem {...Education} />
+            </li>   
+        ))
+    }                  
+</ol>
+
